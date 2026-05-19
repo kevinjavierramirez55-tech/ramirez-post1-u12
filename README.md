@@ -1,6 +1,4 @@
-# Programacion Web - Unidad 12
-
-## Post-Contenido 1 - Contenedorizar Spring Boot y desplegar en Railway
+## Contenedorizar Spring Boot y desplegar en Railway
 
 ## Autor
 
@@ -110,10 +108,10 @@ DB_PASS=${{Postgres.PGPASSWORD}}
 8. Probar la URL publica:
 
 ```powershell
-curl.exe https://TU-DOMINIO.up.railway.app/actuator/health
-curl.exe -i -X POST https://TU-DOMINIO.up.railway.app/api/productos -H "Content-Type: application/json" -d "{\"nombre\":\"Laptop\",\"precio\":3500000,\"categoria\":\"ELECTRONICA\"}"
-curl.exe -i https://TU-DOMINIO.up.railway.app/api/productos
-curl.exe -i https://TU-DOMINIO.up.railway.app/api/productos/1
+curl.exe https://kevinjavierramirez55.up.railway.app/actuator/health
+curl.exe -i -X POST https://kevinjavierramirez55.up.railway.app/api/productos -H "Content-Type: application/json" -d "{\"nombre\":\"Laptop\",\"precio\":3500000,\"categoria\":\"ELECTRONICA\"}"
+curl.exe -i https://kevinjavierramirez55.up.railway.app/api/productos
+curl.exe -i https://kevinjavierramirez55.up.railway.app/api/productos/1
 ```
 
 ## Checkpoints y capturas sugeridas
@@ -130,8 +128,6 @@ Capturar:
 docker build -t mi-app:local .
 docker images mi-app:local
 ```
-
-Evidencia sugerida: `evidencias/u12-post1-checkpoint-1-docker-build.png`.
 
 ### Checkpoint 2 - Docker Compose y PostgreSQL local
 
@@ -152,8 +148,6 @@ curl.exe -i -X POST http://localhost:8080/api/productos -H "Content-Type: applic
 curl.exe -i http://localhost:8080/api/productos
 ```
 
-Evidencia sugerida: `evidencias/u12-post1-checkpoint-2-compose-health-endpoints.png`.
-
 ### Checkpoint 3 - Railway
 
 Capturar:
@@ -165,16 +159,41 @@ Capturar:
 - Terminal o navegador con:
 
 ```powershell
-curl.exe https://TU-DOMINIO.up.railway.app/actuator/health
-curl.exe -i -X POST https://TU-DOMINIO.up.railway.app/api/productos -H "Content-Type: application/json" -d "{\"nombre\":\"Mouse\",\"precio\":85000,\"categoria\":\"ACCESORIOS\"}"
-curl.exe -i https://TU-DOMINIO.up.railway.app/api/productos
-curl.exe -i https://TU-DOMINIO.up.railway.app/api/productos/1
+curl.exe https://kevinjavierramirez55.up.railway.app/actuator/health
+curl.exe -i -X POST https://kevinjavierramirez55.up.railway.app/api/productos -H "Content-Type: application/json" -d "{\"nombre\":\"Mouse\",\"precio\":85000,\"categoria\":\"ACCESORIOS\"}"
+curl.exe -i https://kevinjavierramirez55.up.railway.app/api/productos
+curl.exe -i https://kevinjavierramirez55.up.railway.app/api/productos/1
 ```
-
-Evidencia sugerida: `evidencias/u12-post1-checkpoint-3-railway.png`.
 
 ## Repositorio
 
 ```text
 https://github.com/kevinjavierramirez55-tech/ramirez-post1-u12
 ```
+
+---
+
+## Capturas del Proyecto
+
+Las capturas se encuentran en la carpeta `evidencias/`.
+
+### Imagen docker
+
+![image](evidencias/docker_image.png)
+
+### Railway app
+
+![railway](evidencias/railway_app.png)
+
+### Panel de railway
+
+![panel](evidencias/panel_railway.png)
+
+
+### Endpoint crear producto
+
+![post](evidencias/endpoint_crear_producto.png)
+
+### Endpoint obtener producto por id
+
+![get](evidencias/endpoint_get_productos.png)
